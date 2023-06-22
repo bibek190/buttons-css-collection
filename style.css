@@ -33,17 +33,20 @@
   align-items: center;
   text-align: center;
   background: #0c002b;
-  /* background: rgb(39, 39, 86); */
 }
+
 .box-1 button {
   font-size: 4rem;
   width: 20rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #1670f0;
+  color: white;
   padding: 20px 50px;
   box-shadow: 0 10px 10px rgb(78, 73, 73);
   position: relative;
+  background: #0c002b;
+  overflow: hidden;
+  cursor: pointer;
 }
 .box-1 button:before {
   content: "";
@@ -60,38 +63,193 @@
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(to right, #0c002b, #1779ff);
-  animation: anime1 1s linear infinite;
+  background: linear-gradient(to right, #0c002b, #2ff907);
+  animation: anime1 2s linear infinite;
 }
 @keyframes anime1 {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(100%);
   }
 }
 .box-1 span:nth-child(2) {
   position: absolute;
-  width: 5px;
+  width: 2px;
   top: 0;
   left: 0;
   height: 100%;
-  background: linear-gradient(to right, #0c002b, rgb(25, 99, 209));
+  background: linear-gradient(to bottom, #0c002b, #2ff907);
+  animation: anime2 2s linear infinite;
 }
+@keyframes anime2 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 .box-1 span:nth-child(3) {
   position: absolute;
   width: 100%;
   bottom: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(to right, #0c002b, rgb(25, 99, 209));
+  height: 2px;
+  background: linear-gradient(to left, #0c002b, #2ff907);
+  animation: anime3 2s linear infinite;
+  animation-delay: 1.5s;
 }
+@keyframes anime3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .box-1 span:nth-child(4) {
   position: absolute;
   width: 2px;
   bottom: 0;
   right: 0;
   height: 100%;
-  background: linear-gradient(to right, #0c002b, rgb(25, 99, 209));
+  background: linear-gradient(to bottom, #0c002b, #2af905);
+  animation: anime4 2s linear infinite;
+}
+@keyframes anime4 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* ----------------box-2------------ */
+
+.box-2 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #031321;
+}
+.box-2 button {
+  font-size: 4rem;
+  width: 20rem;
+  padding: 15px 30px;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+  color: #2196f3;
+  background: #031321;
+  position: relative;
+}
+.box-2 button:hover {
+  background: #;
+  color: #255784;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+}
+
+.box-2 button span {
+  position: absolute;
+}
+.box-2 button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+.box-2 button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s ease;
+}
+
+.box-2 button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+.box-2 button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s ease;
+  transition-delay: 0.5s;
+}
+
+.box-2 button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+.box-2 button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s ease;
+  transition-delay: 0.25s;
+}
+.box-2 button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2196f3);
+}
+.box-2 button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s ease;
+  transition-delay: 0.75s;
+}
+/* -------------------box-3---------------- */
+
+.box-3 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #4f5650;
+}
+.box-3 button {
+  font-size: 4rem;
+  width: 20rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  color: #03270a;
+  border: 1px solid #6d7c6d;
+  position: relative;
+  overflow: hidden;
+  background: #4f5650;
+}
+.box-3 button::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(34, 162, 45, 0.5);
+  left: 0;
+  bottom: -110px;
+  border-radius: 50%;
+}
+
+.box-3 button:hover {
+  color: rgb(134, 19, 19);
+  box-shadow: 0 0 20px rgb(152, 227, 114);
+  border-radius: 50%;
+  transition: 0.1s;
+}
+.box-3 button:hover::before {
+  transition: 0.2s ease;
+  bottom: 0;
 }
