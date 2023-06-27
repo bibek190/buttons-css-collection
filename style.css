@@ -219,7 +219,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #4f5650;
+  background: #2b332c;
 }
 .box-3 button {
   font-size: 4rem;
@@ -230,7 +230,9 @@
   border: 1px solid #6d7c6d;
   position: relative;
   overflow: hidden;
-  background: #4f5650;
+  background: #5c7f61;
+  border: 2px solid black;
+  transition: 0.3s ease;
 }
 .box-3 button::before {
   content: "";
@@ -247,7 +249,7 @@
   color: rgb(134, 19, 19);
   box-shadow: 0 0 20px rgb(152, 227, 114);
   border-radius: 50%;
-  transition: 0.1s;
+  transition: 0.5s;
 }
 .box-3 button:hover::before {
   transition: 0.2s ease;
